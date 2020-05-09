@@ -1,0 +1,20 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { render } from 'react-native-testing-library';
+// Components
+import Header from '../components/Header';
+
+describe('Testing related to Header components', () => {
+  test('Renders correctly Header', () => {
+    const tree = renderer.create(<Header />).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('Must has "My Todos" title', () => {
+    const { getByText, getAllByText } = render(<Header />);
+
+    expect(getByText('My Todos').props.children).toEqual('My Todos');
+    expect(getAllByText('My Todos')).toHaveLength(1);
+  });
+});
