@@ -39,16 +39,18 @@ const NavBar = ({ title }) => {
 
   return (
     <ImageBackground
+      testID="navbar-imgback"
       source={require('../../../assets/images/game_bg.png')}
       style={{ ...styles.header, width }}>
       <Icon
+        testID="navbar-icon"
         onPress={onPressOpenDrawer}
         color="black"
         style={styles.icon}
         size={48}
         name="menu"
       />
-      <View style={styles.headerText}>
+      <View testID="navbar-header-container" style={styles.headerText}>
         <Text>{title}</Text>
       </View>
     </ImageBackground>
