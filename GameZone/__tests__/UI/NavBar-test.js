@@ -27,4 +27,35 @@ describe('Testing UI - NavBar component', () => {
 
     expect(imgBack.props.children.length).toEqual(2);
   });
+
+  it('Should the size icon be 48px', () => {
+    const { getByTestId } = render(
+      <MockedNavigator headerTitleComponent={<NavBar title="test" />} />
+    );
+
+    const icon = getByTestId('navbar-icon');
+
+    expect(icon.props.size).toEqual(48);
+  });
+
+  it('Should container has right text content', () => {
+    const { getByTestId } = render(
+      <MockedNavigator headerTitleComponent={<NavBar title="test" />} />
+    );
+
+    const headerContainer = getByTestId('navbar-header-container');
+
+    expect(headerContainer.props.children.props.children).toEqual('test');
+  });
+
+  it('Should openDrawer when pressing the Icon', () => {
+    const { getByTestId } = render(
+      <MockedNavigator headerTitleComponent={<NavBar title="test" />} />
+    );
+
+    jest.spyOn(NavBar.prototype, 'onPressOpenDrawer');
+
+    const icon = getByTestId('navbar-icon');
+    
+  });
 });
