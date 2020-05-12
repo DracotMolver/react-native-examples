@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing UI - Modal component Should render right 1`] = `
+<Modal
+  animationType="slide"
+  hardwareAccelerated={false}
+  testID="modal-native"
+  transparent={false}
+  visible={false}
+>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+        "padding": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 16,
+        }
+      }
+    >
+      <Text
+        testID="modal-text"
+      >
+        test
+      </Text>
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "blue",
+              "fontSize": 32,
+            },
+            Object {
+              "borderColor": "#f2f2f2",
+              "borderRadius": 3,
+              "borderWidth": 1,
+              "marginLeft": 16,
+            },
+            Object {
+              "fontFamily": "Material Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+        testID="modal-icon"
+      >
+        
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</Modal>
+`;

@@ -37,12 +37,17 @@ const ModalHOC = () => {
   return {
     onOpen: onToggle,
     Modal: ({ title }) => (
-      <ModalNative animationType="slide" transparent={false} visible={toggle}>
+      <ModalNative
+        animationType="slide"
+        transparent={false}
+        visible={toggle}
+        testID="modal-native">
         <SafeAreaView style={styles.container}>
           <View style={styles.header}>
-            <Text>{title}</Text>
+            <Text testID="modal-text">{title}</Text>
             <Icon
               onPress={onToggle}
+              testID="modal-icon"
               color="blue"
               style={styles.modalToggleBtn}
               size={32}

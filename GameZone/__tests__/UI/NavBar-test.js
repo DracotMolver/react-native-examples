@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from 'react-native-testing-library';
+import { render, cleanup, fireEvent } from 'react-native-testing-library';
 // mock
 import MockedNavigator from '../../__mocks__/MockedNavigator';
 // component
@@ -48,14 +48,19 @@ describe('Testing UI - NavBar component', () => {
     expect(headerContainer.props.children.props.children).toEqual('test');
   });
 
-  it('Should openDrawer when pressing the Icon', () => {
-    const { getByTestId } = render(
-      <MockedNavigator headerTitleComponent={<NavBar title="test" />} />
-    );
+  // it('Should openDrawer when pressing the Icon', () => {
+    // const rendered = render(
+    //   <MockedNavigator
+    //     headerTitleComponent={<NavBar title="test" testID="nav-test" />}
+    //   />
+    // );
 
-    jest.spyOn(NavBar.prototype, 'onPressOpenDrawer');
+    // console.log(rendered.getByTestId('nav-test'));
 
-    const icon = getByTestId('navbar-icon');
-    
-  });
+    //   const icon = getByTestId('navbar-icon');
+
+    //   fireEvent.press()
+
+    //   // expect(openDrawer).toBeCalled();
+  // });
 });
