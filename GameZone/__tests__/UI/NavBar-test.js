@@ -47,20 +47,4 @@ describe('Testing UI - NavBar component', () => {
 
     expect(headerContainer.props.children.props.children).toEqual('test');
   });
-
-  // it('Should openDrawer when pressing the Icon', () => {
-    // const rendered = render(
-    //   <MockedNavigator
-    //     headerTitleComponent={<NavBar title="test" testID="nav-test" />}
-    //   />
-    // );
-
-    // console.log(rendered.getByTestId('nav-test'));
-
-    //   const icon = getByTestId('navbar-icon');
-
-    //   fireEvent.press()
-
-    //   // expect(openDrawer).toBeCalled();
-  // });
 });
