@@ -13,9 +13,9 @@ const HomeStack = () => (
     <Stack.Screen
       name="Home"
       component={Home}
-      options={{
-        headerTitle: () => <NavBar title="GameZone" />
-      }}
+      // options={{
+      //   headerTitle: () => <NavBar title="GameZone" />
+      // }}
     />
     <Stack.Screen
       name="ReviewDetails"

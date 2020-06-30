@@ -12,9 +12,9 @@ const AboutStack = () => (
     <Stack.Screen
       name="About"
       component={About}
-      options={{
-        headerTitle: () => <NavBar title="About GameZone" />
-      }}
+      // options={{
+      //   headerTitle: () => <NavBar title="About GameZone" />
+      // }}
     />
   </Stack.Navigator>
 );
