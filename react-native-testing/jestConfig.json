@@ -1,0 +1,27 @@
+{
+  "jest": {
+    "resetMocks": false,
+    "verbose": true,
+    "preset": "react-native",
+    "setupFiles": ["<rootDir>/jest/setup.js"],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|expo(nent)?|@unimodules/.*|jest-expo/.*|@expo(nent)?/.*|react-navigation|@react-navigation/.*|sentry-expo|native-base|@coopeuch-components/.*|@react-native-community/.*))"
+    ],
+    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.js",
+      "!<rootDir>/src/App.js",
+      "!<rootDir>/src/ui/App/index.js.js",
+      "!<rootDir>/config/**/*.js",
+      "!<rootDir>/src/ui/styles/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  }
+}
